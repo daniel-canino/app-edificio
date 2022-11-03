@@ -1,0 +1,20 @@
+<html>
+{% load static %}
+<head>
+<meta charset="UTF-8">
+<title>Plaza Suite</title>
+<link rel="stylesheet" type="text/css" href="{% static 'estilos.css' %}">
+</head>
+
+<body>
+<form method="post">
+	{%csrf_token%}
+<h2>Iniciar sesión</h2>
+{{form.user}}
+{{form.password}}
+<input type="submit" name="Enviar">
+
+
+</form>
+</body>
+</html>

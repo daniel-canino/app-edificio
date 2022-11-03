@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+
+	<title>Plaza Suite</title>
+</head>
+<body class=".f">
+	<header>
+		<div class="header">
+			<div class="nombre-empresa"><h1 >Conjunto Residencial Plaza Suite</h1></div>
+			<div class="options-salir">
+				<a href=" {% url 'index' %} "><div class="salir">Salir</div></a>
+			</div>
+		</div>
+		<nav>
+			<ul>
+				<li><a href="{% url 'home' %}">Inicio</a></li>
+				<li class="principal">
+					<a href="#">Ingresar pago</a>
+					<ul class="pago">
+						<li><a href="{% url 'pago_mensuales' %}">Pagos mensuales</a></li>
+						<li><a href="{% url 'pago_extra' %}">Pagos extraordinarios</a></li>
+						<li><a href=" {% url 'ver_mes' %} ">Vizualisar pagos mensuales</a></li>
+						<li><a href="{% url 'ver_extra' %}">Visualizar Pagos extraordinarios</a></li>
+					</ul>
+				</li>
+				<li class="principal">
+					<a href="#">Arrendamiento de antena</a>
+					<ul class="antena">
+						<li><a href="{% url 'fondo_antena' %}">Ingreso</a></li>
+						<li><a href="{% url 'fondo_antena' %}">Egreso</a></li>
+						<li><a href="{% url 'ver_antena' %}">Visualizar fondo</a></li>
+					</ul>
+
+				</li>
+				<li class="principal">
+					<a href="#">Bomba de agua</a>
+					<ul class="bomba">
+					 	<li><a href="{% url 'fondo_bomba' %}">Ingreso</a></li>
+					 	<li><a href="{% url 'fondo_bomba' %}">Egreso</a></li>
+					 	<li><a href="{% url 'ver_bomba' %}">Visualizar fondo</a></li>
+					</ul>
+				</li>
+				<li class="principal">
+					<a href="#">Salon de fiesta</a>
+					<ul class="salon">
+					 	<li><a href="{% url 'fondo_salon' %}">Ingreso</a></li>
+					 	<li><a href="{% url 'fondo_salon' %}">Egreso</a></li>
+					 	<li><a href="{% url 'ver_salon' %}">Visualizar fondo</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+</body>
+</html>
